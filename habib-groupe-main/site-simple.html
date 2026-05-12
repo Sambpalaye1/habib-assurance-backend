@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habib Groupe Assurance - Sénégal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e40af, #3730a3);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            min-width: 200px;
+        }
+        
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+        
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+        
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .features {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .features h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1e40af;
+            font-size: 2em;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .feature-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .feature-card {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1e40af;
+        }
+        
+        .feature-list {
+            text-align: left;
+            list-style: none;
+        }
+        
+        .feature-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #25d366;
+            font-weight: bold;
+        }
+        
+        .contact {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1e40af;
+            font-size: 2em;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .contact-info {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            font-size: 1.5em;
+            margin-right: 15px;
+            min-width: 30px;
+        }
+        
+        .contact-form {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-input, .form-select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .stats {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .stat-item {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #666;
+        }
+        
+        .whatsapp-demo {
+            background: #25d366;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        
+        .whatsapp-demo:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #25d366;
+        }
+        
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+        }
+        
+        .highlight {
+            background: #fef3c7;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            margin: 20px 0;
+        }
+        
+        .highlight strong {
+            color: #d97706;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎋 Habib Groupe Assurance</h1>
+            <p><strong>Assurance Automobile Sénégal</strong></p>
+            <p>Devis gratuit • Agent IA WhatsApp 24/7 • Meilleur prix</p>
+            
+            <div class="buttons">
+                <a href="#contact" class="btn btn-primary">🚗 Devis Gratuit</a>
+                <a href="https://wa.me/22177592723" class="btn btn-whatsapp">💬 WhatsApp: +221 77 759 27 23</a>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1500+</div>
+                    <div class="stat-label">Clients Satisfaits</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Taux de Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support WhatsApp</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5★</div>
+                    <div class="stat-label">Note Clients</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="features">
+            <h2>Nos Services d'Assurance</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚗</div>
+                    <div class="feature-title">Assurance Auto Complète</div>
+                    <ul class="feature-list">
+                        <li>Responsabilité Civile</li>
+                        <li>Assurance Tous Risques</li>
+                        <li>Dommages Collision</li>
+                        <li>Vol et Incendie</li>
+                        <li>Assistance 24/7 Sénégal</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <div class="feature-title">Agent IA WhatsApp</div>
+                    <ul class="feature-list">
+                        <li>Rappels automatiques</li>
+                        <li>Renouvellements en ligne</li>
+                        <li>Support instantané</li>
+                        <li>Notifications intelligentes</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Gestion Admin</div>
+                    <ul class="feature-list">
+                        <li>Statistiques en temps réel</li>
+                        <li>Gestion des ventes</li>
+                        <li>Rapports détaillés</li>
+                        <li>Export de données</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="whatsapp-demo">
+                🎋 Bonjour ! Votre assurance expire dans 3 jours. Renouvelez maintenant !
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact" id="contact">
+            <h2>Contactez-Nous</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <strong>WhatsApp</strong><br>
+                            +221 77 759 27 23
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Téléphone</strong><br>
+                            +221 33 XXX XXX XXX
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <strong>Email</strong><br>
+                            contact@habibgroupe.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Adresse</strong><br>
+                            Dakar, Sénégal
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Demande de Devis Rapide</h3>
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label class="form-label">Nom Complet</label>
+                            <input type="text" class="form-input" placeholder="Votre nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Téléphone</label>
+                            <input type="tel" class="form-input" placeholder="+221 77 759 27 23" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Type de Véhicule</label>
+                            <select class="form-select" required>
+                                <option value="">Choisissez...</option>
+                                <option>Voiture particulière</option>
+                                <option>Véhicule utilitaire</option>
+                                <option>Moto</option>
+                                <option>Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                <input type="checkbox" required> J'accepte de recevoir des rappels WhatsApp pour le renouvellement de mon assurance
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            🚗 Obtenir mon Devis
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Highlight -->
+        <div class="highlight">
+            <strong>🎋 OFFRE SPÉCIALE !</strong><br>
+            Devis gratuit immédiat - Agent IA WhatsApp disponible 24/7 - Meilleur prix garanti au Sénégal
+        </div>
+
+        <!-- Agent IA Information -->
+        <div class="contact">
+            <h2>🤖 Agent IA WhatsApp à Votre Service</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>🎯 Service Disponible 24/7</h3>
+                    <ul class="feature-list">
+                        <li>Réponses instantanées</li>
+                        <li>Devis personnalisés en 2 minutes</li>
+                        <li>Questions sur assurances</li>
+                        <li>Information sur les documents</li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <h3>📱 Fonctionnalités Intelligentes</h3>
+                    <ul class="feature-list">
+                        <li>Détection automatique des besoins</li>
+                        <li>Collecte intelligente des informations</li>
+                        <li>Rappels de renouvellement</li>
+                        <li>Support sinistres</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="whatsapp-demo">
+                🤖 Agent IA : Bonjour ! Je suis votre assistant virtuel. Je peux vous aider avec les devis, les questions d'assurance et les renouvellements. Comment puis-je vous aider ? 📱 +221 77 759 27 23
+            </div>
+            <div class="contact-info" style="text-align: center; margin-top: 20px;">
+                <strong>🚀 Testez maintenant :</strong><br>
+                Envoyez "Bonjour" au +221 77 759 27 23<br>
+                <small>Response immédiate garantie !</small>
+            </div>
+        </div>
+
+        <!-- Service WhatsApp -->
+        <div class="contact">
+            <h2>📱 Service WhatsApp Automatique</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Rappels de Renouvellement</h3>
+                    <ul class="feature-list">
+                        <li>Notifications 30 jours avant expiration</li>
+                        <li>Rappels hebdomadaires les 2 dernières semaines</li>
+                        <li>Messages personnalisés pour chaque client</li>
+                        <li>Option de renouvellement en un clic</li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <h3>Messages Automatiques</h3>
+                    <ul class="feature-list">
+                        <li>Confirmation de souscription immédiate</li>
+                        <li>Rappels de paiement échéance</li>
+                        <li>Alertes spéciales promotions</li>
+                        <li>Support client 24/7</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="whatsapp-demo">
+                🎋 Bonjour ! Votre assurance automobile expire dans 15 jours. Renouvelez maintenant et bénéficiez de -10% ! 📱 +221 77 759 27 23
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>🎋 Habib Groupe Assurance</strong></p>
+            <p>Votre partenaire de confiance pour l'assurance automobile au Sénégal</p>
+            <p>🇸🇳 Fait avec amour au Sénégal</p>
+            <p>&copy; 2024 Tous droits réservés</p>
+        </div>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Merci pour votre demande ! Nous vous contacterons rapidement sur WhatsApp.');
+            
+            // Ouvrir WhatsApp
+            window.open('https://wa.me/22177592723?text=Bonjour, je souhaite un devis d\'assurance automobile', '_blank');
+        }
+        
+        // Animation simple pour les stats
+        window.addEventListener('load', function() {
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => {
+                const finalNumber = stat.innerText;
+                let current = 0;
+                const increment = parseInt(finalNumber) / 50;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= parseInt(finalNumber)) {
+                        stat.innerText = finalNumber;
+                        clearInterval(timer);
+                    } else {
+                        stat.innerText = Math.floor(current) + '+';
+                    }
+                }, 30);
+            });
+        });
+        
+        // Scroll smooth
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

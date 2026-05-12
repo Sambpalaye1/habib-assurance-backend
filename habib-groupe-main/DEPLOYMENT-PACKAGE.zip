@@ -1,0 +1,17 @@
+Ce fichier doit être créé avec un outil de compression. Contenu du package de déploiement:
+
+📁 DEPLOYMENT-PACKAGE/
+├── 📄 index.html (page principale optimisée)
+├── 📄 .htaccess (configuration serveur)
+├── 📄 README-INFINITYFREE.md (instructions détaillées)
+├── 📁 images/
+│   ├── 🖼️ logo.png (optionnel)
+│   ├── 🖼️ og-image.jpg (1200x630 pour réseaux sociaux)
+│   └── 🖼️ twitter-image.jpg (1200x600 pour Twitter)
+└── 📄 DEPLOYMENT-CHECKLIST.txt
+
+Instructions pour créer le ZIP:
+1. Sélectionner les fichiers essentiels
+2. Compresser en format .zip
+3. Nommer: "habib-assurance-deployment.zip"
+4. Envoyer aux clients avec instructions

@@ -1,0 +1,44 @@
+🎋 CHECKLIST DÉPLOIEMENT INFINITYFREE - HABIB GROUPE ASSURANCE
+
+📋 ÉTAPES PRÉ-DÉPLOIEMENT:
+□ Créer compte InfinityFree
+□ Choisir nom de domaine (ex: habib-assurance.infinityfree.app)
+□ Noter identifiants FTP et base de données
+□ Personnaliser les informations dans index.html:
+  □ Remplacer G-XXXXXXXXXX par ID Google Analytics réel
+  □ Mettre numéros WhatsApp réels (+221 77 XXX XXX XXX)
+  □ Mettre email de contact réel
+  □ Vérifier toutes les informations
+
+📁 FICHIERS À UPLOADER:
+□ index.html (page principale)
+□ htaccess.txt (renommer en .htaccess après upload)
+□ README-INFINITYFREE.md (instructions)
+□ images/ (optionnel: logo, images réseaux sociaux)
+
+🚀 PROCESSUS DE DÉPLOIEMENT:
+□ Connexion FTP (FileZilla ou web FTP)
+□ Navigation vers dossier htdocs
+□ Upload des fichiers
+□ Renommer htaccess.txt → .htaccess
+□ Attendre propagation DNS (5-10 min)
+
+✅ TESTS POST-DÉPLOIEMENT:
+□ Accès au site fonctionnel
+□ Page responsive mobile/desktop
+□ Liens WhatsApp cliquables
+□ Formulaire de contact visible
+□ SEO meta tags présents
+□ Google Analytics activé
+
+📱 PARTAGE AUX CLIENTS:
+□ Lien du site testé
+□ Message WhatsApp prêt
+□ Documentation fournie
+□ Support client configuré
+
+🔄 MAINTENANCE:
+□ Backup régulier des fichiers
+□ Surveillance des performances
+□ Mise à jour des informations
+✅ Déploiement terminé avec succès
